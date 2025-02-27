@@ -1,0 +1,29 @@
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.SQL_SLOW: DEBUG
+    org.hibernate.stat: DEBUG
+    #org.hibernate.orm.jdbc.bind: DEBUG
+
+server:
+  port: 8081
+
+### Spring Properties
+spring:
+  application:
+    name: pres
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+  # PRES SQL Server datasource Properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa_test
+    username: root
+    password: Test#12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA properties
+  jpa:
+    generate-ddl: true
+    open-in-view: true
